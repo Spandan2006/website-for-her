@@ -12,15 +12,18 @@ no.addEventListener('click',async function () {
 
     if (noclickcount == 1) {
         gif.src = 'shocked.webp';
+        await gif.decode();
         captions.innerHTML = "WHAT?? <br> YOU SAID NO ?? <br>";
         newh2.innerHTML = "Okay, will give you another chance ￣へ￣";
         text.appendChild(newh2);
     } else if (noclickcount == 2) {
         gif.src = 'teary.webp';
+        await gif.decode();
         captions.innerHTML = "Again..<br> Hope you will say YES now :(";
         newh2.innerHTML = "*You are breaking my heart btw*";
     } else if (noclickcount == 3) {
         gif.src = 'angry.webp';
+        await gif.decode();
         captions.innerHTML = "NOW TRY SAYING NO!";
         newh2.innerHTML = "You got me angry now *humpf!*";
     } else {
@@ -47,6 +50,7 @@ function moveButton() {
 
 yes.addEventListener('click', async function () {
     gif.src = 'heart.gif';
+    await gif.decode();
     captions.innerHTML = "YAYY! <br> YOU SAID YES!!";
     
     if(text.contains(newh2)){
