@@ -7,7 +7,7 @@ let newh2 = document.createElement('h2');
 let container = document.querySelector('.container');
 noclickcount = 0;
 
-no.addEventListener('click', function () {
+no.addEventListener('click',async function () {
     noclickcount++;
 
     if (noclickcount == 1) {
@@ -45,7 +45,7 @@ function moveButton() {
 
 
 
-yes.addEventListener('click', function () {
+yes.addEventListener('click', async function () {
     gif.src = 'heart.gif';
     captions.innerHTML = "YAYY! <br> YOU SAID YES!!";
     
